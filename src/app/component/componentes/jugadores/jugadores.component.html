@@ -1,0 +1,76 @@
+
+<div *ngIf="banderaCard">
+<h1 style="text-align: center;">Infografía de jugadores</h1>
+<div class="card-group">
+    <div class="card" *ngFor="let jugador of jugadores"  (click)="onSelectJugador(jugador)">
+      <img style=" height: 300px;" class="card-img-top" [src]="jugador.img" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{jugador.nombre}}</h4>
+      </div>
+    </div>
+</div>
+</div>
+
+<div >
+  <div *ngIf="jugadorSelecionado?.nombre=='James Rodriguez'" style="text-align: center;">
+    
+    <div class="contenedor">
+      <h2 style="text-align: center;">Infografía {{jugadorSelecionado?.nombre}}</h2>
+      <img style="width: 200px; height: 200px;" [src]="jugadorSelecionado?.img" alt="">
+      <button type="button" (click)="mostarInfoJames()" class="btn btn-primary">Ver mas</button>
+    </div>
+   
+    
+    <div *ngIf="banderaJames">
+      
+      <div style="text-align: left;">
+        <h5>Nombre: {{jugadorSelecionado?.nombre}}</h5>
+        <h5>Bio: {{jugadorSelecionado?.bio}}</h5>
+        <h5>Img: {{jugadorSelecionado?.img}}</h5>
+        <h5>Nacimiento: {{jugadorSelecionado?.nacimiento}}</h5>
+        <h5>Seleción:{{jugadorSelecionado?.seleccion}}</h5>
+        <h5>Equipo: {{jugadorSelecionado?.equipo}}</h5>
+        <div class="d-flex justify-content-end">
+          <button [routerLink]="['jugadores']" [routerLink]="['jugadores']" (click)="cambiarEstado()" type="button" class="btn btn-dark">Home</button>
+        </div>
+       
+      </div>
+     </div>
+   
+  </div>
+
+  <div *ngIf="jugadorSelecionado?.nombre=='Cristiano Ronaldo'" style="text-align: center;">
+    <h2 style="text-align: center;">Infografía {{jugadorSelecionado?.nombre}}</h2>
+    <img style="width: 200px; height: 200px;" [src]="jugadorSelecionado?.img" alt="">
+    <div style="text-align: left;">
+      <h5>Nombre: {{jugadorSelecionado?.nombre}}</h5>
+      <h5>Bio: {{jugadorSelecionado?.bio}}</h5>
+      <h5>Img: {{jugadorSelecionado?.img}}</h5>
+      <h5>Nacimiento: {{jugadorSelecionado?.nacimiento}}</h5>
+      <h5>Seleción:{{jugadorSelecionado?.seleccion}}</h5>
+      <h5>Equipo: {{jugadorSelecionado?.equipo}}</h5>
+      <div class="d-flex justify-content-end">
+        <button [routerLink]="['jugadores']" [routerLink]="['jugadores']" (click)="cambiarEstado()" type="button" class="btn btn-dark">Home</button>
+      </div>
+     
+    </div>
+  </div>
+
+  <div *ngIf="jugadorSelecionado?.nombre=='Leonel Messi'" style="text-align: center;">
+    <h2 style="text-align: center;">Infografía {{jugadorSelecionado?.nombre}}</h2>
+    <img style="width: 200px; height: 200px;" [src]="jugadorSelecionado?.img" alt="">
+    <div style="text-align: left;">
+      <h5>Nombre: {{jugadorSelecionado?.nombre}}</h5>
+      <h5>Bio: {{jugadorSelecionado?.bio}}</h5>
+      <h5>Img: {{jugadorSelecionado?.img}}</h5>
+      <h5>Nacimiento: {{jugadorSelecionado?.nacimiento}}</h5>
+      <h5>Seleción:{{jugadorSelecionado?.seleccion}}</h5>
+      <h5>Equipo: {{jugadorSelecionado?.equipo}}</h5>
+      <div class="d-flex justify-content-end">
+        <button [routerLink]="['jugadores']" [routerLink]="['jugadores']" (click)="cambiarEstado()" type="button" class="btn btn-dark">Home</button>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
